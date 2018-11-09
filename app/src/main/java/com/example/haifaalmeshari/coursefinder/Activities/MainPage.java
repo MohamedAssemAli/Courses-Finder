@@ -1,4 +1,4 @@
-package com.example.haifaalmeshari.coursefinder;
+package com.example.haifaalmeshari.coursefinder.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.haifaalmeshari.coursefinder.App.AppConfig;
+import com.example.haifaalmeshari.coursefinder.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,31 +28,25 @@ public class MainPage extends AppCompatActivity {
         spinnerList.add("Dammam");
         spinnerList.add("Jeddah");
 
-
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,spinnerList);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                final Intent intent;
+                final Intent intent = new Intent(MainPage.this, CityActivity.class);
                 switch (i) {
                     case 1:
-                        intent = new Intent(MainPage.this, RiyadhActivity.class);
-                        startActivity(intent);
+                        intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.RIYADH);
                         break;
                     case 2:
-                        intent = new Intent(MainPage.this, DammamActivity.class);
-                        startActivity(intent);
+                        intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.DAMMAM);
                         break;
                     case 3:
-                        intent = new Intent(MainPage.this, JeddahActivity.class);
-                        startActivity(intent);
+                        intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.JEDDAH);
                         break;
-
-
                 }
-                //startActivity(intent);
+                startActivity(intent);
             }
 
             @Override
@@ -59,8 +56,7 @@ public class MainPage extends AppCompatActivity {
         });
     }
 
-    public void btn_next(View v){
-
+    public void btn_next(View v) {
         Intent intent = new Intent(MainPage.this, CoursesList.class);
         startActivity(intent);
     }

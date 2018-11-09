@@ -1,13 +1,13 @@
-package com.example.haifaalmeshari.coursefinder;
+package com.example.haifaalmeshari.coursefinder.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.haifaalmeshari.coursefinder.R;
+
 public class CoursesList extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +16,10 @@ public class CoursesList extends AppCompatActivity {
 
     }
 
-    public void Org(View v){
-
+    public void Org(View v) {
         Intent intent = new Intent(CoursesList.this, Organization.class);
         startActivity(intent);
     }
-
 
 
 }

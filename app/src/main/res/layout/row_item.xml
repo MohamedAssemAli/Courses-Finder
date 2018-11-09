@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:id="@+id/item_row_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <!--Assem-->
-    <ImageView
+    <TextView
+        android:id="@+id/title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/border"
-        android:id="@+id/imgview"/>
+        android:layout_margin="@dimen/margin_padding_size_micro"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/desc_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title Example"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:id="@+id/titleview"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description Example"
-            android:textSize="15sp"
-            android:id="@+id/descview"/>
-    </LinearLayout>
+        android:layout_margin="@dimen/margin_padding_size_micro"
+        android:textSize="15sp" />
 </LinearLayout>

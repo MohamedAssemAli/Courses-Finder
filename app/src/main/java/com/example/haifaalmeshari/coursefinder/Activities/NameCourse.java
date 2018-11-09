@@ -1,7 +1,9 @@
-package com.example.haifaalmeshari.coursefinder;
+package com.example.haifaalmeshari.coursefinder.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.haifaalmeshari.coursefinder.R;
 
 public class NameCourse extends AppCompatActivity {
 
