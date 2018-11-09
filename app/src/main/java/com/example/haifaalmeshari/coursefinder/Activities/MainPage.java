@@ -21,7 +21,7 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spinner);
         List<String> spinnerList = new ArrayList<>();
         spinnerList.add("Select City");
         spinnerList.add("Riyadh");
@@ -38,15 +38,17 @@ public class MainPage extends AppCompatActivity {
                 switch (i) {
                     case 1:
                         intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.RIYADH);
+                        startActivity(intent);
                         break;
                     case 2:
                         intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.DAMMAM);
+                        startActivity(intent);
                         break;
                     case 3:
                         intent.putExtra(AppConfig.INTENT_CITY_KEY, AppConfig.JEDDAH);
+                        startActivity(intent);
                         break;
                 }
-                startActivity(intent);
             }
 
             @Override
