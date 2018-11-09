@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Course Finder</string>
     <string name="city">City</string>
+    <string name="no_coerces">No coerces at this city</string>
+    <string name="error_getting_data">Error getting data</string>
+    <string name="error_message">City data isn\'t available</string>
 </resources>
