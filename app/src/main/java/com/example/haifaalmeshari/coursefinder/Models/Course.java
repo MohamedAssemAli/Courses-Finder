@@ -9,7 +9,8 @@ public class Course implements Serializable {
     public Course() {
     }
 
-    public Course(String title, String desc, String date, String time, String price, String lat, String lon) {
+    public Course(String uid, String title, String desc, String date, String time, String price, String lat, String lon) {
+        this.uid = uid;
         this.title = title;
         this.desc = desc;
         this.date = date;

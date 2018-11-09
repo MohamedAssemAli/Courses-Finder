@@ -4,4 +4,12 @@
     <string name="no_coerces">No coerces at this city</string>
     <string name="error_getting_data">Error getting data</string>
     <string name="error_message">City data isn\'t available</string>
+    <string name="courses">Courses :</string>
+    <string name="organization">Organization</string>
+    <string name="empty_name">Please add course namr!</string>
+    <string name="empty_fields">Please add all course data!</string>
+    <string name="empty_location">Please add course location!</string>
+    <string name="error_adding_course">Error adding course!</string>
+    <string name="course_added_successfully">Course added successfully!</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

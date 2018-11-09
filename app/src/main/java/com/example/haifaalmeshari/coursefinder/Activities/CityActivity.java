@@ -28,6 +28,7 @@ import java.util.Collections;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CityActivity extends AppCompatActivity {
 
@@ -46,6 +47,15 @@ public class CityActivity extends AppCompatActivity {
     // Vars
     private CoursesAdapter coursesAdapter;
     private ArrayList<Course> courseArrayList;
+    private String cityKey;
+
+    // OnCLick
+    @OnClick(R.id.organization_btn)
+    void goToOrganization() {
+        Intent intent = new Intent(this, Organization.class);
+        intent.putExtra(AppConfig.INTENT_CITY_KEY, cityKey);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +65,8 @@ public class CityActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             init();
-            getCourses(intent.getStringExtra(AppConfig.INTENT_CITY_KEY));
+            cityKey = intent.getStringExtra(AppConfig.INTENT_CITY_KEY);
+            getCourses(cityKey);
         } else {
             // Sandwich data unavailable
             closeOnError();
