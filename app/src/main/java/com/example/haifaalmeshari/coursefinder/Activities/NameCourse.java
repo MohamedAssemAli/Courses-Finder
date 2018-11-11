@@ -32,6 +32,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.w3c.dom.Text;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -41,13 +43,13 @@ public class NameCourse extends AppCompatActivity implements OnMapReadyCallback 
     @BindView(R.id.title_textView10)
     TextView titleTxt;
     @BindView(R.id.desc_editText6)
-    EditText descTxt;
+    TextView descTxt;
     @BindView(R.id.date_editText7)
-    EditText dateTxt;
+    TextView dateTxt;
     @BindView(R.id.time_editText8)
-    EditText timeTxt;
+    TextView timeTxt;
     @BindView(R.id.price_editText9)
-    EditText priceTxt;
+    TextView priceTxt;
     // MapModule
     private static final int ERROR_DIALOG_REQUEST = 9001;
     private static final float DEFAULT_ZOOM = 15f;
@@ -94,6 +96,8 @@ public class NameCourse extends AppCompatActivity implements OnMapReadyCallback 
             }
             mMap.setMyLocationEnabled(false); //to get blue marker with GPS icon
             mMap.getUiSettings().setMyLocationButtonEnabled(false); //to hide GPS icon
+            mMap.getUiSettings().setZoomControlsEnabled(true);
+            googleMap.getUiSettings().setScrollGesturesEnabled(false);
             moveCamera(new LatLng(Double.parseDouble(lat), Double.parseDouble(lon)), DEFAULT_ZOOM);
             marker = mMap.addMarker(new MarkerOptions()
                     .position(new LatLng(Double.parseDouble(lat), Double.parseDouble(lon)))

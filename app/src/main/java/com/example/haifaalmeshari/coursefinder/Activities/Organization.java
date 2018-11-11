@@ -169,7 +169,7 @@ public class Organization extends AppCompatActivity implements OnMapReadyCallbac
             }
             mMap.setMyLocationEnabled(true); //to get blue marker with GPS icon
             mMap.getUiSettings().setMyLocationButtonEnabled(false); //to hide GPS icon
-
+            mMap.getUiSettings().setZoomControlsEnabled(true);
             // Assem
             googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
